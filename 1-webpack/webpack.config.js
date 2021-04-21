@@ -2,7 +2,6 @@ const path = require("path");
 
 // console.log(path.resolve());
 // console.log(path.join(__dirname,'dist'));
-
 const paths = path.join(__dirname,'./dist').split('\\').join('/');
 console.log(paths)
 

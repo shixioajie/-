@@ -28,8 +28,10 @@
   settings->搜索 indent->Code Style->设置缩进
   settings->Keymap->搜索 form->Code->Reformat—>重复代码格式
   使用 webstorm 打 debug
-  ![avatar](./1-环境配置/imgs/16191681681.jpg)
-- ![avatar](./1-环境配置\imgs\c3715.png)
+
+  - ![avatar](https://cdn.jsdelivr.net/gh/shixioajie/imgs/posts/c3715.png)
+  - ![avatar](https://cdn.jsdelivr.net/gh/shixioajie/imgs/posts/16191681681.jpg)
+
 - [VisualStudioCode]
   使用 Ctrl+Shift+p 打开指令示操作，如 settings、key、font。
 

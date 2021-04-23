@@ -1,1 +1,0 @@
-(()=>{console.log("hello webpack"),console.log("\\d 0");for(let o=0;o<10;o++)console.log(o)})();

@@ -1,10 +1,10 @@
 let count = 0;
-function hello(name){
+function hello(name) {
     console.log(`hello ${name}`);
     console.log(`\\d ${count}`)
 }
 hello('webpack');
 
-for(let i = 0;i<10;i++){
+for (let i = 0n; i < 10n; i++) {
     console.log(i);
 }

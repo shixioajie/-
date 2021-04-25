@@ -27,13 +27,37 @@
   settings->搜索 front->设置字体
   settings->搜索 indent->Code Style->设置缩进
   settings->Keymap->搜索 form->Code->Reformat—>重复代码格式
-  使用 webstorm 打 debug
+  **使用 webstorm 打 debug （打点调试）**
 
-  - ![avatar](https://cdn.jsdelivr.net/gh/shixioajie/imgs/posts/c3715.png)
   - ![avatar](https://cdn.jsdelivr.net/gh/shixioajie/imgs/posts/16191681681.jpg)
+  - ![avatar](https://cdn.jsdelivr.net/gh/shixioajie/imgs/posts/c3715.png)
 
-- [VisualStudioCode]
+- [Visual Studio Code]
   使用 Ctrl+Shift+p 打开指令示操作，如 settings、key、font。
+  **使用 Visual Studio Code 打 debug（打点调试）**
+  - 1 行号打红点 2 调试按钮 3 选择语言 4 配置调试 json
+  - ![avatar](https://cdn.jsdelivr.net/gh/shixioajie/imgs/posts/vscode调试.jpg)
+
+#### 真机调试
+
+- Chrome + Android / Safari + IOS
+- Fiddler / Charles
+- Weinre,Spy-Debugger,vConsole (由于设备等问题主要使用第三方 window， Mac OS 都可使用)
+  **Weinre**
+  git 上都有：[下载] npm -g install weinre [查看] weinre --version
+  注意使用点：weinre --help 帮助手册，为了避免端口号冲突的问题 weinre --httpPort=**_指定一个不冲突的端口好_** --boundHost=-all-
+  启动服务：
+  -> weinre --httpPort=10000 --boundHost=-all-
+
+#### 常见的接口测试工具
+- 插件类：
+  Postman,DHC,REST client
+- 平台类
+  Yapi,DOClever,RAP2,EasyMock,Swagger
+- 终端类
+  Postman,SoapUI,DOClever
+***备注*** 以上接口测试工具自行百度。
+
 
 ### 记录
 

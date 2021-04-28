@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button id="send">发送请求</button>
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script>
+
+
+    const random = Mock.Random;
+    // const mockData = Mock.mock({
+    //   // 属性 list 的值是一个数组，其中含有 1 到 10 个元素
+    //   'list|1-10': [{
+    //     // 属性 id 是一个自增数，起始值为 1，每次增 1
+    //     'id|+1': 1,
+    //     'name': '@cname',
+    //     "xing|1-10": "★"
+    //   }]
+    // })
+    // console.log(JSON.stringify(mockData, null, 2))
+
+    // var name = random.cname()
+    // const randomData = {
+    //   email: random.email(),
+    //   name,
+    //   image: random.image("200x250", '#50B347', '#FFF', name),
+    //   url: random.url(),
+    //   address: random.city()
+    // }
+
+    // console.log(JSON.stringify(randomData, null, 2))
+
+    $("#send").click(function () {
+      $.ajax({
+        url: "http://demoApi.com/getlist/",
+        type: "get",
+        dataType: "json"
+      }).done(function (data, status, xhr) {
+        console.log(data)
+      })
+    })
+
+    var obj = { aa: "11", bb: "22", cc: "33", dd: "44" };
+
+    Mock.mock("http://demoApi.com/getlist/", {
+      "user|1-3": [
+        {
+          "id|+1": 1,
+          name: "@cname",
+          "age|18-28": 0,
+          birthday: "@date('yyyy-MM-dd')",
+          city: "@city",
+          "fromObj|2": obj
+        }
+      ]
+    })
+
+
+  </script>
+</body>
+
+</html>

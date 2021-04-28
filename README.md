@@ -50,14 +50,18 @@
   -> weinre --httpPort=10000 --boundHost=-all-
 
 #### 常见的接口测试工具
+
 - 插件类：
   Postman,DHC,REST client
 - 平台类
   Yapi,DOClever,RAP2,EasyMock,Swagger
 - 终端类
   Postman,SoapUI,DOClever
-***备注*** 以上接口测试工具自行百度。
+  **_备注_** 以上接口测试工具自行百度。
 
+#### mock 数据
+
+使用方法有很多这里只演示最简单的那个（直接在 mock.js 的官网查看基本使用方法），**_0-开发环境搭建（IDE 基本使用、真机调试等）\0.2mockJS.html_** 演示,注意：跟多操作在可以在官网上的示例查看。
 
 ### 记录
 

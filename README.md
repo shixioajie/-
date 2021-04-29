@@ -72,3 +72,31 @@
 [查看版本]可以指令 `npx webpack --version` (webpack5 以后可以使用)
 [全局安装]npm install webpack -g 或者 yarn global add webpack webpack-cli
 [调用] npm run package.json scripts 等于的内容
+
+##### 代码示例
+
+```js
+const config = {
+  entry: "./src/index.js", //入口文件
+  output: {
+    filename: "bundle2.js", // 出口文件
+    path: paths, //文件路径（需是绝对路径）
+  },
+  // test 属性，识别出哪些文件会被转换。
+  // use 属性，定义出在进行转换时，应该使用哪个 loader。
+  module: {
+    // 打包文件处理css scss less json等等文件。
+    rules: [{ test: /\.txt$/, use: "raw-loader" }
+    {
+      test:/\.css$/,
+      use: ['style-loader', 'css-loader']//注意一个点，这里的执行顺序是从右向左，
+      //这里是应该是先将识别的css文件打包-》然后在作为style打包。这里的打包工具已经自带了，如果有需要入 scss文件，就需要安装 sass-loader node-scss 。
+    }
+    ],
+  },
+};
+```
+
+[注意]：在这里我们一次次的 npm run [配置文件] 可能觉的比较麻烦，可以在script内在配置一个 "wacth":"webpack --watch" cli-> npm run watch 监听相关文件的变化实时打包。
+
+**_如果你觉得这里提过得演示不够详细官网文档是个好地方 https://webpack.docschina.org/ （现在已经有 webpack5 了不过出处不大新技术可能代表着有新坑哦，个人经验）_**

@@ -77,6 +77,8 @@
 
 ```js
 const config = {
+   mode: "development", /*提供 mode 配置选项，告知 webpack 使用相应环境的内置优化。string
+可能的值有：none, development 或 production（默认）。*/
   entry: "./src/index.js", //入口文件
   output: {
     filename: "bundle2.js", // 出口文件
@@ -97,6 +99,52 @@ const config = {
 };
 ```
 
-[注意]：在这里我们一次次的 npm run [配置文件] 可能觉的比较麻烦，可以在script内在配置一个 "wacth":"webpack --watch" cli-> npm run watch 监听相关文件的变化实时打包。
+[注意]:
 
-**_如果你觉得这里提过得演示不够详细官网文档是个好地方 https://webpack.docschina.org/ （现在已经有 webpack5 了不过出处不大新技术可能代表着有新坑哦，个人经验）_**
+- 在这里我们一次次的 npm run [配置文件] 可能觉的比较麻烦，可以在 script 内在配置一个 "wacth":"webpack --watch" cli-> npm run watch 监听相关文件的变化实时打包。
+- 如果你的每次改变 html 文件你的编辑器没有自动帮你刷新，可以下载 npm install webpack-dev-server --save-dev
+
+**_如果你觉得这里提过得演示不够详细官网文档是个好地方 https://webpack.docschina.org/ （现在已经有 webpack5 了不过出处不大，另外提一点新技术可能代表着有新坑哦，个人经验）_**
+
+
+
+#### Gulp
+
+gulp 也是一款打包工具。
+
+下载：npm install gulp --save-dev ;
+
+目录结构见./gulp 文件。
+
+npx gulp --tasks 查看任务项
+
+```js
+//可以值定执行的任务项
+// 处理js 压缩多操作
+function js() {
+
+}
+
+// 对 css scss文件进行处理
+function css() {
+
+}
+
+
+exports.scripts = js;
+exports.styles = css;
+
+exports.default = function () {
+  console.log("hello gulp");
+}
+```
+
+使用：npx gulp [scprits] 这样的语法来执行。
+
+#### Yoeman
+
+有没有感觉自己配置webpack、Gulp这样的操作会很麻烦，费时费力还记不住那，直接使用yoeman吧，它会帮你输入几条指令就搞定的。 没有下载的同学：npm install -g yo 。使用指令在自己需要的目录中：yo brian-gulp...由于我在使用过程中不太顺利 yo 构建项目时报错没解决了，所以只能搁置了有兴趣的同学可以自己研究（成功了顺便告诉我问题在哪里，我用的win10系统）
+
+
+
+提醒：要把自己的npm发布的同学注意注意自己的npm连接的是哪里哦，只有npm自己的连接才能发布。

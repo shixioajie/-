@@ -1,0 +1,11 @@
+$color: pink;
+$fontColor: white;
+
+body {
+  background: $color;
+  color: $fontColor;
+
+  h2 {
+    border: 1px solid green;
+  }
+}

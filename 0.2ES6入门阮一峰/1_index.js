@@ -205,42 +205,60 @@
 
 // console.log(trampoline(sum(1, 100000)))
 
-function tco(f) {
-  var value;
-  var active = false;
-  var accumulated = [];
+// function tco(f) {
+//   var value;
+//   var active = false;
+//   var accumulated = [];
 
-  return function accumulator() {
-    accumulated.push(arguments);
-    if (!active) {
-      active = true;
-      while (accumulated.length) {
-        value = f.apply(this, accumulated.shift());
-      }
-      active = false;
-      return value;
-    }
-  }
+//   return function accumulator() {
+//     accumulated.push(arguments);
+//     if (!active) {
+//       active = true;
+//       while (accumulated.length) {
+//         value = f.apply(this, accumulated.shift());
+//       }
+//       active = false;
+//       return value;
+//     }
+//   }
+// }
+
+// var sum = tco(function (x, y) {
+//   if (y > 0) {
+//     return sum(x + 1, y - 1)
+//   } else {
+//     return x;
+//   }
+// })
+// sum(1, 100000)
+
+// function clownsEverywhere(p1,p2,) {
+
+// }
+
+// let map = new Map([
+//   [1, 'one'],
+//   [2, 'two'],
+//   [3, 'three'],
+// ])
+
+// console.log([...map.keys()]);
+
+// var go = function* () {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+// console.log(...go())
+
+let arrayLike = {
+  '0': 'a',
+  '1': 'b',
+  '2': 'c',
+  'length': 3
 }
-
-var sum = tco(function (x, y) {
-  if (y > 0) {
-    return sum(x + 1, y - 1)
-  } else {
-    return x;
-  }
-})
-sum(1, 100000)
-
-function clownsEverywhere(p1,p2,) {
-
-}
-
-
-
-
-
-
+console.log(Array.prototype.slice.call(arrayLike))
+console.log(Array.from(arrayLike))
 
 
 

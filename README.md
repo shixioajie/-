@@ -182,6 +182,7 @@ ok开始把直接搭建的实验项目，vue create 【给你的项目名】完�
 - E2E Testing     E2E测试。
 
   ​	
+vue-cli 3以上的朋友查看自己的项目配置可以 vue inspect > output.js
 
 初学者注意这里时上下键选择用空格选中。
 
